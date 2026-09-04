@@ -1,8 +1,20 @@
 cask "rive-cli" do
-  version "0.1.12"
-  sha256 "98fc1dc583a4becb64f1272a9777bcc95a56af50e04f8d5b03ef975722cef0db"
+  version "0.1.17"
+  sha256 arm:          "ef308b8662047f5d7d3cce7da8ec460cf92a0d07ec40187245568cb5c314ef0d",
+         x86_64_linux: "3e097655d500980885d23e3df9450d193924906e49e3be6c956be295e27c2117"
 
-  url "https://releases.rive.app/cli/v#{version}/rive-macos-arm64.tar.gz"
+  on_macos do
+    url "https://releases.rive.app/cli/v#{version}/rive-macos-arm64.tar.gz"
+
+    depends_on macos: :ventura
+    depends_on arch: :arm64
+  end
+  on_linux do
+    url "https://releases.rive.app/cli/v#{version}/rive-linux-x64.tar.gz"
+
+    depends_on arch: :x86_64
+  end
+
   name "Rive CLI"
   desc "Command-line tools for Rive"
   homepage "https://rive.app/"
@@ -14,12 +26,8 @@ cask "rive-cli" do
     end
   end
 
-  depends_on macos: :ventura
-  depends_on arch: :arm64
-
   binary "rive"
 
-  # Leaves ~/.rive (version cache, current/default) on uninstall.
   zap trash: "~/.rive"
 
   caveats <<~EOS
