@@ -1,7 +1,7 @@
 cask "rive-cli" do
-  version "1.10.0"
-  sha256 arm:          "33dee37d05f205f82980cc3a2e6a0c10323c0af8d84fef22b5e1c607a9bfc2a6",
-         x86_64_linux: "8d097e38bd2af5a4015dcd24d0916484c23cb3808a4cefb42f311a0b0db76a1a"
+  version "1.11.0"
+  sha256 arm:          "d2f2e68b011a8ae81223d712f12527aeb01bc4c1fc260433b9acd02d9b63fcab",
+         x86_64_linux: "fc55c639502c10683c486270229faab9637c0b7573cb803b086ce2ec5aa08aba"
 
   on_macos do
     url "https://releases.rive.app/cli/v#{version}/rive-macos-arm64.tar.gz"
