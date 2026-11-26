@@ -1,6 +1,6 @@
 cask "ion" do
-  version "0.1.43"
-  sha256 "f9b36075e1c075df194cbcb212f85c354ace4768131c0bca8fe996749a3af9ec"
+  version "0.1.45"
+  sha256 "eb73874a03c8e5536e6177b607f42c089213cf1dfd9cd57e38f4d55ecd4a8b32"
 
   url "https://releases.rive.app/ion/v#{version}/Ion-macos-arm64.zip"
   name "Ion"
